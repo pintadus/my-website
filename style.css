@@ -1,0 +1,135 @@
+/* ============================================================
+   style.css — controls how EVERY page looks.
+   All pages link to this one file, so a change here
+   updates the whole site.
+   ============================================================ */
+
+/* --- Variables: change these to restyle the whole site --- */
+:root {
+  --bg: #fafaf7;          /* page background */
+  --text: #222;           /* main text color */
+  --muted: #666;          /* secondary text (dates, captions) */
+  --accent: #2a6f97;      /* links and highlights */
+  --card: #ffffff;        /* background of boxes/cards */
+  --border: #e3e3dc;
+  --max-width: 760px;     /* how wide the content can get */
+}
+
+/* --- Basic reset & typography --- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a { color: var(--accent); }
+img { max-width: 100%; }
+
+/* --- Navigation bar (top of every page) --- */
+header {
+  border-bottom: 1px solid var(--border);
+  background: var(--card);
+}
+
+nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;          /* lets links wrap on small phones */
+  gap: 1.25rem;
+  align-items: center;
+}
+
+nav .logo {
+  font-weight: 700;
+  margin-right: auto;       /* pushes the other links to the right */
+  text-decoration: none;
+  color: var(--text);
+}
+
+nav a { text-decoration: none; }
+nav a.active { font-weight: 700; text-decoration: underline; }
+
+/* --- Main content area --- */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* --- Home page: bio --- */
+.bio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.bio img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;       /* makes the photo a circle */
+  object-fit: cover;
+  background: var(--border);
+}
+
+.bio-text { flex: 1; min-width: 240px; }
+
+/* --- Social network links --- */
+.social {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.social a {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;     /* pill shape */
+  text-decoration: none;
+}
+
+.social a:hover { background: var(--accent); color: white; }
+
+/* --- Cards: used for blog posts, hobbies, services --- */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.card h2, .card h3 { margin-top: 0; }
+
+.date { color: var(--muted); font-size: 0.9rem; }
+
+/* --- Grid layout for hobbies and services --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* --- Comment section on blog posts --- */
+.comments {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}

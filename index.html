@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- index.html — the HOME page. Browsers open "index.html" by default. -->
+<html lang="en">
+<head>
+  <!-- The <head> holds info ABOUT the page; it isn't shown directly. -->
+  <meta charset="UTF-8">
+  <!-- Makes the site display properly on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alejandro — Home</title>        <!-- text shown in the browser tab -->
+  <link rel="stylesheet" href="style.css"> <!-- connects our styles -->
+</head>
+<body>
+
+  <!-- Navigation: the same block is copied into every page -->
+  <header>
+    <nav>
+      <a class="logo" href="index.html">Alejandro</a>
+      <a class="active" href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="hobbies.html">Hobbies</a>
+      <a href="business.html">Business</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bio">
+      <!-- Put a photo named "me.jpg" in this folder and it will show here -->
+      <img src="me.jpg" alt="Photo of Alejandro">
+
+      <div class="bio-text">
+        <h1>Hi, I'm Alejandro 👋</h1>
+        <p>
+          Hello, I'm Alejandro and this is my personal webpage. I have been working on data and backend all my life so... this is my first web dev experience with help of IA.
+        </p>
+        <p>
+          A second paragraph can say what visitors will find on this site.
+        </p>
+
+        <!-- Social links: replace the "#" with your real profile URLs -->
+        <ul class="social">
+          <li><a href="#" target="_blank">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/in/alejandropintadorodriguez/" target="_blank">LinkedIn</a></li>
+          <li><a href="#" target="_blank">X / Twitter</a></li>
+          <li><a href="#" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Alejandro</footer>
+
+</body>
+</html>

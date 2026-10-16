@@ -1,0 +1,4 @@
+git config --global user.email "pintadus@gmail.com"
+
+git clone https://github.com/pintadus/mi-primera-web.git
+cd mi-proyecto
